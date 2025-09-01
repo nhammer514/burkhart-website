@@ -1,3 +1,9 @@
+:root{
+  --space: clamp(12px, 2.5vw, 24px);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
 /* Motion */
 @keyframes slideOutLeft   { from {opacity:1; transform:translateX(0)}   to {opacity:0; transform:translateX(-16px)} }
 @keyframes slideOutRight  { from {opacity:1; transform:translateX(0)}   to {opacity:0; transform:translateX(16px)} }
@@ -64,7 +70,9 @@ body{
     margin-bottom: auto;
 }
 
-button{
+#nav_bar a{
+    text-decoration: none;
+    color: black;
     background-color: rgb(199, 199, 199);
     border-radius: 10px;
     font-size: 2vh;
@@ -74,10 +82,52 @@ button{
     transition-duration: 0.4s;
 }
 
-button:hover{
+#contact_us{
+    text-decoration: none;
     background-color: rgb(199, 199, 199);
+    border-radius: 10px;
+    font-size: 3vh;
+    padding: 10px;
+    border: 2px solid rgb(199, 199, 199);
+    transition-duration: 0.4s;
+}
+
+#contact_us:hover{
+    padding: 15px;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    color: red;
     border: 2px solid red;
 }
+
+#nav_bar a:visited{
+    text-decoration: none;
+    background-color: rgb(199, 199, 199);
+    border-radius: 10px;
+    font-size: 2vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid rgb(199, 199, 199);
+    transition-duration: 0.4s;
+}
+
+#nav_bar a:hover{
+    text-decoration: none;
+    background-color: rgb(199, 199, 199);
+    margin: 4px;
+    color: red;
+    border: 2px solid red;
+}
+
+#nav_bar a:active{
+    text-decoration: none;
+    background-color: rgb(202, 202, 202);
+    margin: 4px;
+    color: red;
+    border: 2px solid red;
+}
+
+
 
 #content{
     margin-left: 15%;
@@ -187,4 +237,95 @@ footer{
   margin-left: auto;
   margin-right: auto;
   width: 60%;
+}
+
+@media (hover: none) {
+  #nav_bar a,
+  #contact_us{
+    transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+  }
+}
+
+@media (max-width: 900px){
+
+    h1, h2{
+        text-align: center;
+    }
+
+    hr{
+        display: none;
+    }
+
+    #content{
+        margin: 0;
+    }
+    #nav_bar{
+        display: none;
+    }
+
+    .home{
+        justify-content: normal;
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    .home img{
+        margin: 0;
+        width: 100%
+    }
+
+    .home .text{
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+    }
+
+
+    #contact_us{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .top_header{
+        font-size: 12px;
+        display: flex;
+        background-color: black;
+        height: 3vh;
+        justify-content: space-between; 
+        color: white;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .feedback{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .feedback .reviews{
+        margin: auto;
+        display: block;
+        width: 90%;
+    }
+
+    .services{
+        padding: 0;
+        justify-content: normal; 
+        display: block;
+        width: 100%;
+    }
+
+    .services .text{
+
+        padding-left: 25px;
+        display: block;
+        width: 85%;
+    }
+
+    .services img{
+        margin: 0;
+        width: 100%
+    }
+
 }
