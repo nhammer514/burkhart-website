@@ -1,0 +1,190 @@
+/* Motion */
+@keyframes slideOutLeft   { from {opacity:1; transform:translateX(0)}   to {opacity:0; transform:translateX(-16px)} }
+@keyframes slideOutRight  { from {opacity:1; transform:translateX(0)}   to {opacity:0; transform:translateX(16px)} }
+@keyframes slideInLeft    { from {opacity:0; transform:translateX(-16px)} to {opacity:1; transform:translateX(0)} }
+@keyframes slideInRight   { from {opacity:0; transform:translateX(16px)}  to {opacity:1; transform:translateX(0)} }
+
+/* Apply to the wrapper so stars/quote/quoter move together */
+.quote-wrap.exit-left  { animation: slideOutLeft  180ms ease both; }
+.quote-wrap.exit-right { animation: slideOutRight 180ms ease both; }
+.quote-wrap.enter-left { animation: slideInLeft   200ms ease both; }
+.quote-wrap.enter-right{ animation: slideInRight  200ms ease both; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .quote-wrap.exit-left,
+  .quote-wrap.exit-right,
+  .quote-wrap.enter-left,
+  .quote-wrap.enter-right { animation: none; }
+}
+
+body{
+    background-color: white;
+    color: black;
+    margin: 0;
+    font-family: "Baloo 2", sans-serif;
+}
+
+.top_header{
+    display: flex;
+    background-color: black;
+    height: 4vh;
+    justify-content: space-between; 
+    color: white;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.top_header a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.header{
+    background-color: rgb(199, 199, 199);
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#logo{
+    height: inherit;
+}
+
+#nav_bar{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+button{
+    background-color: rgb(199, 199, 199);
+    border-radius: 10px;
+    font-size: 2vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid rgb(199, 199, 199);
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: rgb(199, 199, 199);
+    border: 2px solid red;
+}
+
+#content{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.home{
+    justify-content: space-between; 
+    display: flex;
+    padding: 25px;
+}
+
+.services{
+    flex-direction: row-reverse;
+    justify-content: space-between; 
+    display: flex;
+    padding: 25px;
+}
+
+.services .text{
+    padding-left: 25px;
+    display: block;
+    width: 50%
+}
+
+.services img{
+    display: block;
+    width: 50%
+}
+
+.home .text{
+    display: block;
+    width: 50%
+}
+
+.home .text button{
+    display: block;
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+.home img{
+    width: 50%
+}
+
+footer{
+    font-size: small;
+    background-color: black;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+.feedback{
+    padding: 25px;
+}
+
+.feedback h2{
+    text-align: center;
+}
+
+
+.feedback .text{
+    display: block;
+    width: 45%;
+    text-align: right;
+}
+
+.feedback .reviews{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 60%;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;          
+  gap: 16px;
+}
+
+#review_navigation .arrow-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.arrow-btn img {
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+.quote-wrap {
+  text-align: center;
+}
+#stars { font-size: xxx-large; }
+
+#quote {
+  margin: 8px auto;
+  max-width: 60ch;
+  min-height: 6rem;
+}
+#quoter { font-size: 25px; }
+
+.feedback .reviews {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
